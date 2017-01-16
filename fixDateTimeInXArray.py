@@ -4,7 +4,7 @@ field = 'A_PCP_110_SFC_acc'
 allFiles = os.listdir(directoryData)
 fileList = []
 for oneFile in allFiles:
-    if oneFile.endswith(".nc") and ('daysum' in oneFile) and ('1982' in oneFile):
+    if oneFile.endswith(".nc") and ('daysum' in oneFile):
         fileList.append(''.join([directoryData,oneFile]))
 fileList.sort()
 
