@@ -13,7 +13,7 @@ def getOneDay(oneFile):
     fileStrings = str.split(oneFile,'.')
     year = int(fileStrings[1])
     dayOfYear = int(fileStrings[2])
-    time = pd.datetime(year,1,1) + pd.DateOffset(days=dayOfYear-1) #,hours=8)
+    time = pd.datetime(year,1,1) + pd.DateOffset(days=dayOfYear-1) 
     time = [time]
     prData = xy.open_dataset(oneFile,decode_cf=False) 
     lon = prData['lon_110']
