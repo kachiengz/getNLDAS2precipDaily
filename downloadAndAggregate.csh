@@ -11,11 +11,12 @@ set sd = 1
 set leapYear = 0
 
 while ($year < 2016)
-    if ($year % 4 != 0) then #(year is not divisible by 4) 
+    #determine if it is a leap year, so that we know if there are 365 or 366 subdirectories
+    if ($year % 4 != 0) then 
         set leapYear = 0
-    else if ($year % 100 != 0) then #(year is not divisible by 100) then 
+    else if ($year % 100 != 0) then 
         set leapYear = 1
-    else if ($year % 400 != 0) then  #(year is not divisible by 400) then 
+    else if ($year % 400 != 0) then 
         set leapYear = 0
     else 
         set leapYear = 1
