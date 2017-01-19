@@ -23,7 +23,7 @@ def getOneDay(oneFile):
     dayOfYear = int(fileStrings[2])
     time = pd.datetime(year,1,1) + pd.DateOffset(days=dayOfYear-1) 
     time = [time]
-    prData = xy.open_dataset(oneFile,decode_cf=False) 
+    prData = xy.open_dataset(oneFile) 
     lon = deepcopy(prData['lon_110'])
     lat = deepcopy(prData['lat_110'])
     prOneDay = xy.DataArray(deepcopy(prData[field]), coords=[time,lat,lon],dims=['time','lat','lon'])
